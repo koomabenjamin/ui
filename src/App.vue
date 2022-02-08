@@ -2,11 +2,15 @@
 import {
   BadgeCheckIcon,
   PlusIcon,
+  SparklesIcon,
+  DotsHorizontalIcon,
 } from '@heroicons/vue/outline';
 export default {
   components: {
     BadgeCheckIcon,
     PlusIcon,
+    SparklesIcon,
+    DotsHorizontalIcon
   },
 };
 </script>
@@ -92,16 +96,68 @@ export default {
     </div>
 
     <!-- footer -->
-    <div class="p-5 flex flex-col" v-for="item in [1,2,3,3,3,2]" :key="item">
+    <div class="p-5 flex flex-col">
       <div class="h-16 w-16 bg-gradient-to-r from-red-500 via-red-600 to-red-600 rounded-full flex items-center justify-center">
         <PlusIcon class="text-white h-8 w-8" />
       </div>
     </div>
 
-    <div class="text-gray-400 mt-5 font-bold text-sm fixed bottom-0 right-0">2022 UI/UX Designs ui.com</div>
+    <div class="text-gray-400 mt-5 font-bold text-sm absolute bottom-3 left-5">&#169; 2022 UI/UX Designs ui.com</div>
 
   </div>
-  <div class="bg-white border-r border-l w-1/2"></div>
+  <div class="bg-white border-r border-l w-1/2 overflow-auto no-scroll-bar">
+    <!-- greeting -->
+    <div class="flex p-5 justify-between">
+      <p class="text-3xl font-bold font-sans">Hi Sanjiv</p>
+      <div class="flex items-center">
+        <span class="font-sans text-gray-400 text-sm font-bold mr-3">15% task completions</span>
+        <div class="w-[100px] bg-gray-200 rounded-full h-2.5">
+          <div class="bg-red-600 h-2.5 rounded-full" style="width: 45%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- cards -->
+    <div class="p-5 flex flex-nowrap space-x-2 w-full overflow-auto no-scroll-bar">
+      <div class="flex-none flex h-80 w-80 bg-gradient-to-r from-red-500 via-red-600 to-red-600 rounded-xl p-10">
+        <!-- card content -->
+        <div class="h-ful w-full rounded-2xl flex flex-col">
+          <div class="flex justify-between">
+            <div class="h-20 w-20 bg-red-800 rounded-2xl flex justify-center items-center">
+              <SparklesIcon class="h-12 w-12 text-gray-100"/>
+            </div>
+            <DotsHorizontalIcon class="h-10 w-10 text-gray-100"/>
+          </div>
+          <div class="text-2xl font-bold text-white mt-4">
+            R&D for new Banking Mobile App
+          </div>
+          <div class="relative mt-4 flex">
+            <div class="absolute border-2 border-white bg-yellow-400 h-12 w-12 rounded-full"></div>
+            <div class="absolute left-8 border-2 border-white bg-yellow-400 h-12 w-12 rounded-full"></div>
+            <div class="absolute left-16 border-2 border-white bg-yellow-400 h-12 w-12 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-none flex h-80 w-80 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 rounded-xl p-10" v-for="item in [1,2,3,3,3,2]" :key="item">
+        <div class="h-ful w-full rounded-2xl flex flex-col">
+          <div class="flex justify-between">
+            <div class="h-20 w-20 bg-purple-800 rounded-2xl flex justify-center items-center">
+              <SparklesIcon class="h-12 w-12 text-gray-100"/>
+            </div>
+            <DotsHorizontalIcon class="h-10 w-10 text-gray-100"/>
+          </div>
+          <div class="text-2xl font-bold text-white mt-4">
+            R&D for new Banking Mobile App
+          </div>
+          <div class="relative mt-4 flex">
+            <div class="absolute border-2 border-white bg-cyan-400 h-12 w-12 rounded-full"></div>
+            <div class="absolute left-8 border-2 border-white bg-green-400 h-12 w-12 rounded-full"></div>
+            <div class="absolute left-16 border-2 border-white bg-yellow-400 h-12 w-12 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="w-1/4 h-full"></div>
 </div>
 </template>
