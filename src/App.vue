@@ -4,13 +4,15 @@ import {
   PlusIcon,
   SparklesIcon,
   DotsHorizontalIcon,
+  SearchIcon,
 } from '@heroicons/vue/outline';
 export default {
   components: {
     BadgeCheckIcon,
     PlusIcon,
     SparklesIcon,
-    DotsHorizontalIcon
+    DotsHorizontalIcon,
+    SearchIcon,
   },
 };
 </script>
@@ -117,8 +119,8 @@ export default {
       </div>
     </div>
 
-    <!-- cards -->
-    <div class="p-5 flex flex-nowrap space-x-2 w-full overflow-auto no-scroll-bar">
+    <!-- cards 8th Feb 2022 -->
+    <div class="p-5 flex flex-nowrap space-x-2 w-full overflow-x-auto cursor-pointer">
       <div class="flex-none flex h-80 w-80 bg-gradient-to-r from-red-500 via-red-600 to-red-600 rounded-xl p-10">
         <!-- card content -->
         <div class="h-ful w-full rounded-2xl flex flex-col">
@@ -157,11 +159,145 @@ export default {
         </div>
       </div>
     </div>
+
+    <!-- tabs 9th Feb 2022 -->
+    <!-- heading -->
+    <div class="flex p-5 justify-between">
+      <h2 class="text-3xl font-bold">Monthly Tasks</h2>
+      <!-- buttons -->
+      <div class="flex space-x-2">
+        <button class="font-semibold p-2 h-9 text-sm rounded-full w-20 bg-gray-300 text-black">Archive</button>
+        <button class="font-semibold p-2 h-9 text-sm rounded-full w-20 bg-purple-700 text-white flex items-center justify-around">
+          <PlusIcon class="h-5 w-5 text-white"/>
+          <span>New</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- tabs -->
+    <div class="w-full flex flex-col overflow-y-auto">
+      <div class="flex justify-between h-10 shadow-sm px-5 mt-10">
+        <div class="flex space-x-5">
+          <div class="cursor-pointer text-lg p-1 font-semibold font-sans text-purple-700 h-10 border-b-2 border-purple-700">Archived</div>
+          <div class="cursor-pointer text-lg p-1 font-semibold font-sans text-gray-300 h-10">Pending</div>
+          <div class="cursor-pointer text-lg p-1 font-semibold font-sans text-gray-300 h-10">Complete</div>
+        </div>
+        <div class="flex space-x-2 text-gray-400 relative mb-2">
+          <SearchIcon class="h-6 w-6 absolute left-5 top-2 z-10"/>
+          <input class="w-36 px-10 rounded-full h-10 focus-within:w-48 transform duration-500 translate-x-1" placeholder="Search"/>
+        </div>
+      </div>
+      <!-- tab lists -->
+      <div class="px-5 py-5 h-full w-full flex flex-col divide-y">
+        <div class="py-1 text-lg font-semibold font-sans text-gray-300 h-10">Today</div>
+        <div class="py-3 flex items-center space-x-2">
+          <div class="shadow-lg shadow-red-500/60 h-24 w-24 flex-grow-0 flex-shrink-0 bg-red-600 rounded-3xl flex items-center justify-center">
+            <BadgeCheckIcon class="h-16 w-16 text-white" />
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-black text-2xl font-bold">Uber Story</h3>
+            <p class="text-gray-400 text-sm w-80">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+          </div>
+          <div class="relative flex items-center bg-black">
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-0"></div>
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-8"></div>
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-16"></div>
+          </div>
+        </div>
+        <div class="py-3 flex items-center space-x-2">
+          <div class="shadow-lg shadow-purple-500/60 h-24 w-24 flex-grow-0 flex-shrink-0 bg-purple-600 rounded-3xl flex items-center justify-center">
+            <BadgeCheckIcon class="h-16 w-16 text-white" />
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-black text-2xl font-bold">Uber Story</h3>
+            <p class="text-gray-400 text-sm w-80">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+          </div>
+          <div class="relative flex items-center bg-black">
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-0"></div>
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-8"></div>
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-16"></div>
+          </div>
+        </div>
+        <div class="py-3 flex items-center space-x-2">
+          <div class="shadow-lg shadow-orange-500/60 h-24 w-24 flex-grow-0 flex-shrink-0 bg-orange-400 rounded-3xl flex items-center justify-center">
+            <BadgeCheckIcon class="h-16 w-16 text-white" />
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-black text-2xl font-bold">Uber Story</h3>
+            <p class="text-gray-400 text-sm w-80">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+          </div>
+          <div class="relative flex items-center bg-black">
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-0"></div>
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-8"></div>
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-16"></div>
+          </div>
+        </div>
+      </div>
+      <div class="px-5 py-5 h-full w-full flex flex-col divide-y">
+        <div class="py-1 text-lg font-semibold font-sans text-gray-300 h-10">Tomorrow</div>
+        <div class="py-3 flex items-center space-x-2">
+          <div class="shadow-lg shadow-purple-500/60 h-24 w-24 flex-grow-0 flex-shrink-0 bg-purple-800 rounded-3xl flex items-center justify-center">
+            <BadgeCheckIcon class="h-16 w-16 text-white" />
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-black text-2xl font-bold">Uber Story</h3>
+            <p class="text-gray-400 text-sm w-80">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+          </div>
+          <div class="relative flex items-center bg-black">
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-0"></div>
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-8"></div>
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-16"></div>
+          </div>
+        </div>
+        <div class="py-3 flex items-center space-x-2">
+          <div class="shadow-lg shadow-gray-900/60 h-24 w-24 flex-grow-0 flex-shrink-0 bg-black rounded-3xl flex items-center justify-center">
+            <BadgeCheckIcon class="h-16 w-16 text-white" />
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-black text-2xl font-bold">Uber Story</h3>
+            <p class="text-gray-400 text-sm w-80">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+          </div>
+          <div class="relative flex items-center bg-black">
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-0"></div>
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-8"></div>
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-16"></div>
+          </div>
+        </div>
+        <div class="py-3 flex items-center space-x-2">
+          <div class="shadow-lg shadow-gray-900/60 h-24 w-24 flex-grow-0 flex-shrink-0 bg-black rounded-3xl flex items-center justify-center">
+            <BadgeCheckIcon class="h-16 w-16 text-white" />
+          </div>
+          <div class="flex flex-col">
+            <h3 class="text-black text-2xl font-bold">Uber Story</h3>
+            <p class="text-gray-400 text-sm w-80">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+          </div>
+          <div class="relative flex items-center bg-black">
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-0"></div>
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-8"></div>
+            <div class="h-12 w-12 absolute border-2 bg-sky-500 rounded-full left-16"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="w-1/4 h-full"></div>
 </div>
 </template>
 
 <style>
-
+body {
+  @apply font-sans text-black
+}
 </style>
