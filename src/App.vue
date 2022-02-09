@@ -107,7 +107,7 @@ export default {
     <div class="text-gray-400 mt-5 font-bold text-sm absolute bottom-3 left-5">&#169; 2022 UI/UX Designs ui.com</div>
 
   </div>
-  <div class="bg-white border-r border-l w-1/2 overflow-auto no-scroll-bar">
+  <div class="bg-white border-r border-l w-1/2 h-screen overflow-auto no-scroll-bar">
     <!-- greeting -->
     <div class="flex p-5 justify-between">
       <p class="text-3xl font-bold font-sans">Hi Sanjiv</p>
@@ -175,7 +175,7 @@ export default {
     </div>
 
     <!-- tabs -->
-    <div class="w-full flex flex-col overflow-y-auto">
+    <div class="w-full flex flex-col overflow-auto">
       <div class="flex justify-between h-10 shadow-sm px-5 mt-10">
         <div class="flex space-x-5">
           <div class="cursor-pointer text-lg p-1 font-semibold font-sans text-purple-700 h-10 border-b-2 border-purple-700">Archived</div>
@@ -188,7 +188,7 @@ export default {
         </div>
       </div>
       <!-- tab lists -->
-      <div class="px-5 py-5 h-full w-full flex flex-col divide-y">
+      <div class="px-5 py-5 w-full flex flex-col divide-y">
         <div class="py-1 text-lg font-semibold font-sans text-gray-300 h-10">Today</div>
         <div class="py-3 flex items-center space-x-2">
           <div class="shadow-lg shadow-red-500/60 h-24 w-24 flex-grow-0 flex-shrink-0 bg-red-600 rounded-3xl flex items-center justify-center">
