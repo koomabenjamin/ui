@@ -18,8 +18,8 @@ export default {
 </script>
 
 <template>
-<div class="flex w-screen h-screen">
-  <div class="bg-gray-100 h-full w-1/4 relative overflow-auto no-scroll-bar p-0">
+<div class="flex mx-auto container">
+  <div class="bg-gray-100 h-screen w-1/4 relative overflow-auto no-scroll-bar p-0">
     <!-- name bar -->
     <div class="flex p-5">
       <div class="h-16 w-16 bg-red-500 rounded-full shadow-lg shadow-red-500/50"></div>
@@ -120,7 +120,7 @@ export default {
     </div>
 
     <!-- cards 8th Feb 2022 -->
-    <div class="p-5 flex flex-nowrap space-x-2 w-full overflow-x-auto cursor-pointer">
+    <div class="p-5 flex flex-nowrap space-x-2 w-full overflow-x-auto no-scroll-bar cursor-pointer">
       <div class="flex-none flex h-80 w-80 bg-gradient-to-r from-red-500 via-red-600 to-red-600 rounded-xl p-10">
         <!-- card content -->
         <div class="h-ful w-full rounded-2xl flex flex-col">
