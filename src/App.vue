@@ -5,6 +5,10 @@ import {
   SparklesIcon,
   DotsHorizontalIcon,
   SearchIcon,
+  CalendarIcon,
+  ViewGridIcon,
+  PhoneIcon,
+  DotsVerticalIcon,
 } from '@heroicons/vue/outline';
 export default {
   components: {
@@ -13,6 +17,10 @@ export default {
     SparklesIcon,
     DotsHorizontalIcon,
     SearchIcon,
+    CalendarIcon,
+    ViewGridIcon,
+    PhoneIcon,
+    DotsVerticalIcon,
   },
 };
 </script>
@@ -292,7 +300,40 @@ export default {
       </div>
     </div>
   </div>
-  <div class="w-1/4 h-full"></div>
+  <div class="w-1/4 h-screen flex flex-col">
+    <div class="flex p-5 items-center justify-between">
+      <p class="text-2xl font-bold font-sans">Today's Schedule</p>
+      <div class="flex items-center justify-around h-10 rounded-full bg-gray-100 w-32 p-2">
+        <ViewGridIcon class="h-6 w-6 text-gray-300" />
+        <CalendarIcon class="h-6 w-6 text-gray-400" />
+      </div>
+    </div>
+
+    <div class="flex flex-col p-5 h-52">
+      <div class="flex w-full items-center justify-between py-1">
+        <p class="text-xs text-red-600 font-bold">30 minutes call with ...</p>
+        <p class="text-blue-600 font-semibold flex items-center justify-between">
+          <PlusIcon class="h-5 w-5"/>
+          <span class="pl-2 text-xs">invite</span>
+        </p>
+      </div>
+      <h5 class="py-2 font-semibold">Project Discovery Call</h5>
+
+      <div class="flex relative items-center h-28 w-full shadow-lg shadow-emerald-300/80 rounded-xl bg-gradient-to-b from-emerald-400 via-emerald-400 to-emerald-400">
+        <div class="w-1/3 relative flex items-center justify-center ml-2">
+          <div class="h-3 w-3 absolute border-2 bg-red-600 rounded-full left-[52px] -top-[22px] xl:-top-[30px] xl:left-[58px] z-10"></div>
+          <div class="h-9 w-9 xl:w-12 xl:h-12 absolute border-2 bg-sky-500 rounded-full left-0"></div>
+          <div class="h-9 w-9 xl:w-12 xl:h-12 absolute border-2 bg-sky-500 rounded-full left-5"></div>
+          <div class="h-9 w-9 xl:w-12 xl:h-12 absolute border-2 bg-sky-500 rounded-full left-10"></div>
+        </div>
+        <div class="flex w-2/3 items-center justify-end xl:justify-center space-x-2 xl:space-x-5">
+          <h4 class="text-white text-xl xl:text-2xl font-semibold">50:38</h4>
+          <PhoneIcon class="h-6 w-6 text-white"/>
+          <DotsVerticalIcon class="h-6 w-6 text-white"/>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 
