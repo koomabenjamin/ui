@@ -30,7 +30,7 @@ export default {
   <div class="bg-gray-100 h-screen w-1/4 relative overflow-auto no-scroll-bar p-0">
     <!-- name bar -->
     <div class="flex p-5">
-      <div class="h-16 w-16 bg-red-500 rounded-full shadow-lg shadow-red-500/50"></div>
+      <div class="h-16 w-16 bg-rose-500 rounded-full shadow-lg shadow-red-500/50"></div>
       <div class="flex flex-col justify-center ml-2">
         <span class="text-black font-bold">Sanjiv Patel</span>
         <span class="text-black font-semibold text-xs">sanjiv.patel@ui.com</span>
@@ -43,7 +43,7 @@ export default {
       <div class="font-bold text-lg p-5">Menu</div>
       <!-- menu items -->
       <div class="w-full h-16 p-0 flex items-center">
-        <span class="h-12 w-2 rounded-tr-full rounded-br-full bg-red-600"></span>
+        <span class="h-12 w-2 rounded-tr-full rounded-br-full bg-rose-600"></span>
         <div class="flex w-full items-center">
           <!-- icon -->
           <BadgeCheckIcon class="mx-3 h-8 w-8 font-normal text-red-600"/>
@@ -52,7 +52,7 @@ export default {
         </div>
       </div>
       <div class="w-full h-16 p-0 flex items-center" v-for="item in [1,2,3,3,3,2]" :key="item">
-        <span class="h-12 w-2 rounded-tr-full rounded-br-full bg-red-600 invisible"></span>
+        <span class="h-12 w-2 rounded-tr-full rounded-br-full bg-rose-600 invisible"></span>
         <div class="flex w-full items-center">
           <!-- icon -->
           <BadgeCheckIcon class="mx-3 h-8 w-8 font-normal text-gray-400"/>
@@ -68,7 +68,7 @@ export default {
       <div class="font-bold text-lg p-5">Favorites</div>
       <!-- menu items -->
       <div class="w-full h-16 p-0 flex items-center">
-        <span class="h-12 w-2 rounded-tr-full rounded-br-full bg-red-600 invisible"></span>
+        <span class="h-12 w-2 rounded-tr-full rounded-br-full bg-rose-600 invisible"></span>
         <div class="flex w-full items-center">
           <!-- icon -->
           <div class="mx-3 h-6 w-6 font-normal border-2 border-yellow-400 rounded-full"></div>
@@ -77,7 +77,7 @@ export default {
         </div>
       </div>
       <div class="w-full h-16 p-0 flex items-center">
-        <span class="h-12 w-2 rounded-tr-full rounded-br-full bg-red-600 invisible"></span>
+        <span class="h-12 w-2 rounded-tr-full rounded-br-full bg-rose-600 invisible"></span>
         <div class="flex w-full items-center">
           <!-- icon -->
           <div class="mx-3 h-6 w-6 font-normal border-2 border-cyan-400 rounded-full"></div>
@@ -86,7 +86,7 @@ export default {
         </div>
       </div>
       <div class="w-full h-16 p-0 flex items-center">
-        <span class="h-12 w-2 rounded-tr-full rounded-br-full bg-red-600 invisible"></span>
+        <span class="h-12 w-2 rounded-tr-full rounded-br-full bg-rose-600 invisible"></span>
         <div class="flex w-full items-center">
           <!-- icon -->
           <div class="mx-3 h-6 w-6 font-normal border-2 border-green-400 rounded-full"></div>
@@ -95,7 +95,7 @@ export default {
         </div>
       </div>
       <div class="w-full h-16 p-0 flex items-center">
-        <span class="h-12 w-2 rounded-tr-full rounded-br-full bg-red-600 invisible"></span>
+        <span class="h-12 w-2 rounded-tr-full rounded-br-full bg-rose-600 invisible"></span>
         <div class="flex w-full items-center">
           <!-- icon -->
           <div class="mx-3 h-6 w-6 font-normal border-2 border-purple-400 rounded-full"></div>
@@ -122,18 +122,18 @@ export default {
       <div class="flex items-center">
         <span class="font-sans text-gray-400 text-sm font-bold mr-3">15% task completions</span>
         <div class="w-[100px] bg-gray-200 rounded-full h-2.5">
-          <div class="bg-red-600 h-2.5 rounded-full" style="width: 45%"></div>
+          <div class="bg-rose-600 h-2.5 rounded-full" style="width: 45%"></div>
         </div>
       </div>
     </div>
 
     <!-- cards 8th Feb 2022 -->
-    <div class="p-5 flex flex-nowrap space-x-2 w-full overflow-x-auto no-scroll-bar cursor-pointer">
+    <div class="p-5 flex space-x-2 w-full overflow-auto cursor-pointer scroll-smooth no-scroll-bar">
       <div class="flex-none flex h-80 w-80 bg-gradient-to-r from-red-500 via-red-600 to-red-600 rounded-xl p-10">
         <!-- card content -->
         <div class="h-ful w-full rounded-2xl flex flex-col">
           <div class="flex justify-between">
-            <div class="h-20 w-20 bg-red-800 rounded-2xl flex justify-center items-center">
+            <div class="h-20 w-20 bg-rose-800 rounded-2xl flex justify-center items-center">
               <SparklesIcon class="h-12 w-12 text-gray-100"/>
             </div>
             <DotsHorizontalIcon class="h-10 w-10 text-gray-100"/>
@@ -199,7 +199,7 @@ export default {
       <div class="px-5 py-5 w-full flex flex-col divide-y">
         <div class="py-1 text-lg font-semibold font-sans text-gray-300 h-10">Today</div>
         <div class="py-3 flex items-center space-x-2">
-          <div class="shadow-lg shadow-red-500/60 h-24 w-24 flex-grow-0 flex-shrink-0 bg-red-600 rounded-3xl flex items-center justify-center">
+          <div class="shadow-lg shadow-red-500/60 h-24 w-24 flex-grow-0 flex-shrink-0 bg-rose-600 rounded-3xl flex items-center justify-center">
             <BadgeCheckIcon class="h-16 w-16 text-white" />
           </div>
           <div class="flex flex-col">
@@ -309,7 +309,7 @@ export default {
       </div>
     </div>
 
-    <div class="flex flex-col p-5 h-52">
+    <div class="flex flex-col p-5 h-60 border-b">
       <div class="flex w-full items-center justify-between py-1">
         <p class="text-xs text-red-600 font-bold">30 minutes call with ...</p>
         <p class="text-blue-600 font-semibold flex items-center justify-between">
@@ -321,7 +321,7 @@ export default {
 
       <div class="flex relative items-center h-28 w-full shadow-lg shadow-emerald-300/80 rounded-xl bg-gradient-to-b from-emerald-400 via-emerald-400 to-emerald-400">
         <div class="w-1/3 relative flex items-center justify-center ml-2">
-          <div class="h-3 w-3 absolute border-2 bg-red-600 rounded-full left-[52px] -top-[22px] xl:-top-[30px] xl:left-[58px] z-10"></div>
+          <div class="h-3 w-3 absolute border-2 bg-rose-600 rounded-full left-[52px] -top-[22px] xl:-top-[30px] xl:left-[58px] z-10"></div>
           <div class="h-9 w-9 xl:w-12 xl:h-12 absolute border-2 bg-sky-500 rounded-full left-0"></div>
           <div class="h-9 w-9 xl:w-12 xl:h-12 absolute border-2 bg-sky-500 rounded-full left-5"></div>
           <div class="h-9 w-9 xl:w-12 xl:h-12 absolute border-2 bg-sky-500 rounded-full left-10"></div>
@@ -330,6 +330,43 @@ export default {
           <h4 class="text-white text-xl xl:text-2xl font-semibold">50:38</h4>
           <PhoneIcon class="h-6 w-6 text-white"/>
           <DotsVerticalIcon class="h-6 w-6 text-white"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col p-5 h-60 border-b">
+      <h5 class="pt-2 font-semibold">Design Project</h5>
+      <div class="pb-2 text-gray-300 font-semibold text-sm">
+        <div></div> 
+        In progress
+      </div>
+
+      <div class="flex relative items-center h-28 w-full space-x-4">
+        <div class="flex flex-col w-1/3 items-start justify-center">
+          <div class="text-gray-300 font-semibold text-sm">Completed</div>
+          <div class="relative">
+            <h2 class="text-5xl font-semibold">114</h2>
+            <div class="h-2 w-2 bg-emerald-600 absolute rounded-full top-0 left-[72px]"></div>
+            <div class="h-2 w-2 bg-emerald-500 absolute animate-ping rounded-full top-0 left-[72px]"></div>
+          </div>
+        </div>
+        <div class="flex flex-col w-1/3 items-start justify-center">
+          <div class="text-gray-300 font-semibold text-sm whitespace-nowrap">In-Progress</div>
+          <div class="relative">
+            <h2 class="text-5xl font-semibold">14</h2>
+            <div class="h-2 w-2 bg-rose-600 absolute rounded-full top-0 left-[54px]"></div>
+            <div class="h-2 w-2 bg-rose-500 absolute animate-ping rounded-full top-0 left-[54px]"></div>
+          </div>
+        </div>
+        <div class="flex flex-col w-1/3 items-start relative">
+          <div class="text-gray-300 font-semibold text-sm whitespace-nowrap ">Team Members</div>
+          <div class="relative">
+            <div class="h-12 w-12 border-2 z-10 border-purple-700 bg-purple-300 absolute rounded-full top-0 left-8"></div>
+            <div class="h-12 w-12 border-2 z-10 border-purple-700 bg-purple-300 absolute rounded-full top-0 left-16"></div>
+            <h2 class="h-12 w-12 bg-purple-300 rounded-full border-2 z-10 border-purple-700 items-center justify-center flex text-2xl font-semibold text-white">
+              P
+            </h2>
+          </div>
         </div>
       </div>
     </div>
