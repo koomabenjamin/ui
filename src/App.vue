@@ -336,9 +336,9 @@ export default {
 
     <div class="flex flex-col p-5 h-60 border-b">
       <h5 class="pt-2 font-semibold">Design Project</h5>
-      <div class="pb-2 text-gray-300 font-semibold text-sm">
-        <div></div> 
-        In progress
+      <div class="pb-2 text-gray-300 font-semibold text-sm flex items-center space-x-2">
+        <BadgeCheckIcon class="h-8 w-8"/>
+        <span>In progress</span>
       </div>
 
       <div class="flex relative items-center h-28 w-full space-x-4">
