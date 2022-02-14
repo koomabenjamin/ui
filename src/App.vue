@@ -26,8 +26,8 @@ export default {
 </script>
 
 <template>
-<div class="flex mx-auto container">
-  <div class="bg-gray-100 h-screen w-1/4 relative overflow-auto no-scroll-bar p-0">
+<div class="flex mx-auto lg:container">
+  <div class="bg-gray-100 h-screen w-1/4 relative overflow-auto no-scroll-bar p-0 hidden lg:block">
     <!-- name bar -->
     <div class="flex p-5">
       <div class="h-16 w-16 bg-rose-500 rounded-full shadow-lg shadow-red-500/50"></div>
@@ -115,7 +115,7 @@ export default {
     <div class="text-gray-400 mt-5 font-bold text-sm absolute bottom-3 left-5">&#169; 2022 UI/UX Designs ui.com</div>
 
   </div>
-  <div class="bg-white border-r border-l w-1/2 h-screen overflow-auto no-scroll-bar">
+  <div class="bg-white border-r border-l lg:w-1/2 w-full h-screen overflow-auto no-scroll-bar mb-24">
     <!-- greeting -->
     <div class="flex p-5 justify-between">
       <p class="text-3xl font-bold font-sans">Hi Sanjiv</p>
@@ -300,74 +300,80 @@ export default {
       </div>
     </div>
   </div>
-  <div class="w-1/4 h-screen flex flex-col">
-    <div class="flex p-5 items-center justify-between">
-      <p class="text-2xl font-bold font-sans">Today's Schedule</p>
-      <div class="flex items-center justify-around h-10 rounded-full bg-gray-100 w-32 p-2">
-        <ViewGridIcon class="h-6 w-6 text-gray-300" />
-        <CalendarIcon class="h-6 w-6 text-gray-400" />
+  <div class="w-1/4 h-screen hidden lg:block">
+    <div class="w-full h-full">
+      <div class="flex p-5 items-center justify-between">
+        <p class="text-2xl font-bold font-sans">Today's Schedule</p>
+        <div class="flex items-center justify-around h-10 rounded-full bg-gray-100 w-32 p-2">
+          <ViewGridIcon class="h-6 w-6 text-gray-300" />
+          <CalendarIcon class="h-6 w-6 text-gray-400" />
+        </div>
+      </div>
+      <div class="flex flex-col p-5 h-60 border-b">
+        <div class="flex w-full items-center justify-between py-1">
+          <p class="text-xs text-red-600 font-bold">30 minutes call with ...</p>
+          <p class="text-blue-600 font-semibold flex items-center justify-between">
+            <PlusIcon class="h-5 w-5"/>
+            <span class="pl-2 text-xs">invite</span>
+          </p>
+        </div>
+        <h5 class="py-2 font-semibold">Project Discovery Call</h5>
+        <div class="flex relative items-center h-28 w-full shadow-lg shadow-emerald-300/80 rounded-xl bg-gradient-to-b from-emerald-400 via-emerald-400 to-emerald-400">
+          <div class="w-1/3 relative flex items-center justify-center ml-2">
+            <div class="h-3 w-3 absolute border-2 bg-rose-600 rounded-full left-[52px] -top-[22px] xl:-top-[30px] xl:left-[58px] z-10"></div>
+            <div class="h-9 w-9 xl:w-12 xl:h-12 absolute border-2 bg-sky-500 rounded-full left-0"></div>
+            <div class="h-9 w-9 xl:w-12 xl:h-12 absolute border-2 bg-sky-500 rounded-full left-5"></div>
+            <div class="h-9 w-9 xl:w-12 xl:h-12 absolute border-2 bg-sky-500 rounded-full left-10"></div>
+          </div>
+          <div class="flex w-2/3 items-center justify-end xl:justify-center space-x-2 xl:space-x-5">
+            <h4 class="text-white text-xl xl:text-2xl font-semibold">50:38</h4>
+            <PhoneIcon class="h-6 w-6 text-white"/>
+            <DotsVerticalIcon class="h-6 w-6 text-white"/>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col p-5 h-60 border-b">
+        <h5 class="pt-2 font-semibold">Design Project</h5>
+        <div class="pb-2 text-gray-300 font-semibold text-sm flex items-center space-x-2">
+          <BadgeCheckIcon class="h-8 w-8"/>
+          <span>In progress</span>
+        </div>
+        <div class="flex relative items-center h-28 w-full space-x-4">
+          <div class="flex flex-col w-1/3 items-start justify-center">
+            <div class="text-gray-300 font-semibold text-sm">Completed</div>
+            <div class="relative">
+              <h2 class="text-5xl font-semibold">114</h2>
+              <div class="h-2 w-2 bg-emerald-600 absolute rounded-full top-0 left-[72px]"></div>
+              <div class="h-2 w-2 bg-emerald-500 absolute animate-ping rounded-full top-0 left-[72px]"></div>
+            </div>
+          </div>
+          <div class="flex flex-col w-1/3 items-start justify-center">
+            <div class="text-gray-300 font-semibold text-sm whitespace-nowrap">In-Progress</div>
+            <div class="relative">
+              <h2 class="text-5xl font-semibold">14</h2>
+              <div class="h-2 w-2 bg-rose-600 absolute rounded-full top-0 left-[54px]"></div>
+              <div class="h-2 w-2 bg-rose-500 absolute animate-ping rounded-full top-0 left-[54px]"></div>
+            </div>
+          </div>
+          <div class="flex flex-col w-1/3 items-start relative">
+            <div class="text-gray-300 font-semibold text-sm whitespace-nowrap ">Team Members</div>
+            <div class="relative">
+              <div class="h-12 w-12 border-2 z-10 border-purple-700 bg-purple-300 absolute rounded-full top-0 left-8"></div>
+              <div class="h-12 w-12 border-2 z-10 border-purple-700 bg-purple-300 absolute rounded-full top-0 left-16"></div>
+              <h2 class="h-12 w-12 bg-purple-300 rounded-full border-2 z-10 border-purple-700 items-center justify-center flex text-2xl font-semibold text-white">
+                P
+              </h2>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="flex flex-col p-5 h-60 border-b">
-      <div class="flex w-full items-center justify-between py-1">
-        <p class="text-xs text-red-600 font-bold">30 minutes call with ...</p>
-        <p class="text-blue-600 font-semibold flex items-center justify-between">
-          <PlusIcon class="h-5 w-5"/>
-          <span class="pl-2 text-xs">invite</span>
-        </p>
-      </div>
-      <h5 class="py-2 font-semibold">Project Discovery Call</h5>
-
-      <div class="flex relative items-center h-28 w-full shadow-lg shadow-emerald-300/80 rounded-xl bg-gradient-to-b from-emerald-400 via-emerald-400 to-emerald-400">
-        <div class="w-1/3 relative flex items-center justify-center ml-2">
-          <div class="h-3 w-3 absolute border-2 bg-rose-600 rounded-full left-[52px] -top-[22px] xl:-top-[30px] xl:left-[58px] z-10"></div>
-          <div class="h-9 w-9 xl:w-12 xl:h-12 absolute border-2 bg-sky-500 rounded-full left-0"></div>
-          <div class="h-9 w-9 xl:w-12 xl:h-12 absolute border-2 bg-sky-500 rounded-full left-5"></div>
-          <div class="h-9 w-9 xl:w-12 xl:h-12 absolute border-2 bg-sky-500 rounded-full left-10"></div>
-        </div>
-        <div class="flex w-2/3 items-center justify-end xl:justify-center space-x-2 xl:space-x-5">
-          <h4 class="text-white text-xl xl:text-2xl font-semibold">50:38</h4>
-          <PhoneIcon class="h-6 w-6 text-white"/>
-          <DotsVerticalIcon class="h-6 w-6 text-white"/>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex flex-col p-5 h-60 border-b">
-      <h5 class="pt-2 font-semibold">Design Project</h5>
-      <div class="pb-2 text-gray-300 font-semibold text-sm flex items-center space-x-2">
-        <BadgeCheckIcon class="h-8 w-8"/>
-        <span>In progress</span>
-      </div>
-
-      <div class="flex relative items-center h-28 w-full space-x-4">
-        <div class="flex flex-col w-1/3 items-start justify-center">
-          <div class="text-gray-300 font-semibold text-sm">Completed</div>
-          <div class="relative">
-            <h2 class="text-5xl font-semibold">114</h2>
-            <div class="h-2 w-2 bg-emerald-600 absolute rounded-full top-0 left-[72px]"></div>
-            <div class="h-2 w-2 bg-emerald-500 absolute animate-ping rounded-full top-0 left-[72px]"></div>
-          </div>
-        </div>
-        <div class="flex flex-col w-1/3 items-start justify-center">
-          <div class="text-gray-300 font-semibold text-sm whitespace-nowrap">In-Progress</div>
-          <div class="relative">
-            <h2 class="text-5xl font-semibold">14</h2>
-            <div class="h-2 w-2 bg-rose-600 absolute rounded-full top-0 left-[54px]"></div>
-            <div class="h-2 w-2 bg-rose-500 absolute animate-ping rounded-full top-0 left-[54px]"></div>
-          </div>
-        </div>
-        <div class="flex flex-col w-1/3 items-start relative">
-          <div class="text-gray-300 font-semibold text-sm whitespace-nowrap ">Team Members</div>
-          <div class="relative">
-            <div class="h-12 w-12 border-2 z-10 border-purple-700 bg-purple-300 absolute rounded-full top-0 left-8"></div>
-            <div class="h-12 w-12 border-2 z-10 border-purple-700 bg-purple-300 absolute rounded-full top-0 left-16"></div>
-            <h2 class="h-12 w-12 bg-purple-300 rounded-full border-2 z-10 border-purple-700 items-center justify-center flex text-2xl font-semibold text-white">
-              P
-            </h2>
-          </div>
-        </div>
+  </div>
+  <div class="h-24 w-screen block lg:hidden bg-red-600 fixed bottom-0">
+    <div class="flex w-full items-center justify-around h-full group">
+      <div class="flex flex-col text-white hover:animate-bounce" v-for="item in [1, 2, 3, 4, 5]" :key="item">
+        <BadgeCheckIcon class="h-12 w-12"/>
+        <span class="font-normal">Home</span>
       </div>
     </div>
   </div>
